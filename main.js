@@ -52,22 +52,30 @@ function recomendacion(nombre, peso, pesoMax,pesoMin){
 }
 
 //Datos del usuario//
-nombre = prompt("Ingrese su nombre");
-genero = prompt("Ingrese su género (F o M)").toUpperCase();
-
+nombre = prompt("Ingresá tu nombre");
+genero = prompt("Ingresá tu género (F o M)").toUpperCase();
 saludar(nombre);
+altura = Number(prompt("Ingreá tu altura en cms"));
+peso = Number(prompt("Ingresá tu peso actual en kg"));
 
-let cantPersonas = Number(prompt("Ingrese cantidad de personas que quiere consultar"));
+calculoPeso(nombre, genero, altura, peso);
 
-for(let i = 0; i < cantPersonas; i+=1){
-  nombre = prompt("Ingrese el nombre");
-  genero = prompt("Ingrese género (F o M)").toUpperCase();
-  altura = Number(prompt("Ingrese altura en cms"));
-  peso = Number(prompt("Ingrese su peso actual en kg"));
+if(confirm("Quisieras consultar por alguien más?")) {
   
-  calculoPeso(nombre, genero, altura, peso);
+  let cantPersonas = Number(prompt("Ingrese cantidad de personas que quiere consultar"));
 
+  for(let i = 0; i < cantPersonas; i+=1){
+    nombre = prompt("Ingrese el nombre");
+    genero = prompt("Ingrese género (F o M)").toUpperCase();
+    altura = Number(prompt("Ingrese altura en cms"));
+    peso = Number(prompt("Ingrese su peso actual en kg"));
+    
+    calculoPeso(nombre, genero, altura, peso);
+  }
+} else {
+  alert("Gracias por utilizar nuestros servicios")
 }
+
 
 
 
