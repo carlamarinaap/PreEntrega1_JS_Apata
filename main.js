@@ -72,9 +72,8 @@ if(confirm("Quisieras consultar por alguien más?")) {
     
     calculoPeso(nombre, genero, altura, peso);
   }
-} else {
-  alert("Gracias por utilizar nuestros servicios")
 }
+alert("Gracias por utilizar nuestros servicios, a continuación verá el detalle de las rutinas sugeridas")
 
 
 
