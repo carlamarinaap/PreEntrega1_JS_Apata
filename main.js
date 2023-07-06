@@ -25,7 +25,7 @@ function calculoPeso(nombre, genero, altura, peso){
       recomendacion(nombre,peso,pesoMax,pesoMin)
       break;
     default:  
-      alert("Se necesita de un género válido para hacer el cálculo");
+      document.write("Para" + nombre +" se necesita de un género válido para hacer el cálculo");
   }
 }
 
